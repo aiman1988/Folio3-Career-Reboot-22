@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "698309c7-697d-45b0-b82a-659d46ebe746",
+		"name": "edenrobe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24862104"
+	},
+	"item": [
+		{
+			"name": "POST Request for token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"query\":\"mutation($email_1:String!,$password_1:String!,$guest_quote_id_1:String){generateCustomerToken(email:$email_1,password:$password_1,guest_quote_id:$guest_quote_id_1){token}}\",\"variables\":{\"email_1\":\"takmilaiman@gmail.com\",\"password_1\":\"Fatima123#\",\"guest_quote_id_1\":null}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edenrobe.com/graphql",
+					"protocol": "https",
+					"host": [
+						"edenrobe",
+						"com"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Request for SKU",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "yhejvv4o4x9gi6w0ur5hgz9fh6qgknov",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://edenrobe.com/graphql?hash=4066740153&filter_1={%22sku%22:{%22in%22:[%22EMUC22S-LEGACY%22,%22F-6291107453156%22,%22EGBS22-019%22,%22EMTWC22-35809%22,%22EMUB22S-HONOR%22,%22EWTKE22-68443%22,%22EGTH22-008%22,%22F-6298141928800%22,%22EGTKE22-70485%22,%22EWTKP22-68605%22]},%22customer_group_id%22:{%22eq%22:1}}&_currency=%22%22",
+					"protocol": "https",
+					"host": [
+						"edenrobe",
+						"com"
+					],
+					"path": [
+						"graphql"
+					],
+					"query": [
+						{
+							"key": "hash",
+							"value": "4066740153"
+						},
+						{
+							"key": "filter_1",
+							"value": "{%22sku%22:{%22in%22:[%22EMUC22S-LEGACY%22,%22F-6291107453156%22,%22EGBS22-019%22,%22EMTWC22-35809%22,%22EMUB22S-HONOR%22,%22EWTKE22-68443%22,%22EGTH22-008%22,%22F-6298141928800%22,%22EGTKE22-70485%22,%22EWTKP22-68605%22]},%22customer_group_id%22:{%22eq%22:1}}"
+						},
+						{
+							"key": "_currency",
+							"value": "%22%22"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Request for SKU Women Unstiched",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "yhejvv4o4x9gi6w0ur5hgz9fh6qgknov",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://edenrobe.com/graphql?hash=237224189&sort_1={%22new%22:%22DESC%22}&filter_1={%22price%22:{},%22category_id%22:{%22in%22:[%2215%22]},%22customer_group_id%22:{%22eq%22:1}}&pageSize_1=24&currentPage_1=1&_currency=%22%22",
+					"protocol": "https",
+					"host": [
+						"edenrobe",
+						"com"
+					],
+					"path": [
+						"graphql"
+					],
+					"query": [
+						{
+							"key": "hash",
+							"value": "237224189"
+						},
+						{
+							"key": "sort_1",
+							"value": "{%22new%22:%22DESC%22}"
+						},
+						{
+							"key": "filter_1",
+							"value": "{%22price%22:{},%22category_id%22:{%22in%22:[%2215%22]},%22customer_group_id%22:{%22eq%22:1}}"
+						},
+						{
+							"key": "pageSize_1",
+							"value": "24"
+						},
+						{
+							"key": "currentPage_1",
+							"value": "1"
+						},
+						{
+							"key": "_currency",
+							"value": "%22%22"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
